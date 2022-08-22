@@ -5,40 +5,36 @@ public class Main {
         //Crear gets y sets de cada propiedad.
         //Crear un objeto persona en el main.
         //Utiliza los gets y sets para darle valores a las propiedades edad, nombre y telefono, por último muéstralas por consola.
+
        Persona persona = new Persona();
-
-       persona.setEdad("30 Años");
        persona.setNombre("Andrea");
-       persona.setTelefono("2059841");
+       System.out.println("Mi nombre es: " + persona.getNombre());
+       persona.setEdad(30);
+       System.out.println("Mi edad es: " + persona.getEdad());
+       persona.setTelefono(2059841);
+       System.out.println("Mi telefono es: " + persona.getTelefono());
 
-       String edad = persona.getEdad();
-       System.out.println(edad);
 
-       String nombre = persona.getNombre();
-       System.out.println(nombre);
-
-       String telefono = persona.getTelefono();
-       System.out.println(telefono);
     }
 }
 
 class Persona{
-    private String edad;
+    private int edad;
     private String nombre;
-    private String telefono;
+    private int telefono;
 
-    public void setEdad(String edad){
+    public void setEdad(int edad){
         this.edad = edad;
     }
     public void setNombre(String nombre){
         this.nombre = nombre;
     }
 
-    public void setTelefono(String telefono){
+    public void setTelefono(int telefono){
         this.telefono = telefono;
     }
 
-    public String getEdad(){
+    public int getEdad(){
         return this.edad;
     }
 
@@ -46,7 +42,7 @@ class Persona{
         return  this.nombre;
     }
 
-    public String getTelefono(){
+    public int getTelefono(){
         return  this.telefono;
     }
 
